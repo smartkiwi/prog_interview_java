@@ -11,7 +11,7 @@ import java.util.ArrayList;
  * Time: 11:14 AM
  * Binary Tree traversal tests
  */
-public class NodeTest extends TestCase {
+public class BinaryTreeTest extends TestCase {
     public void testPreOrderRecursive() throws Exception {
         BinaryTree myNode = Utils.buildTestTreeFull();
         ArrayList<Integer> order = myNode.preOrderRecursive();
