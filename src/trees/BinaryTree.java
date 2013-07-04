@@ -78,48 +78,64 @@ public class BinaryTree {
         return result;
     }
 
-    public ArrayList<Integer> postOrderNonRecursive() {
+    private ArrayList<Integer> traverseNonRecursive(TraversalType traversalType) {
         ArrayList<Integer> result = new ArrayList<Integer>();
         LinkedList<BinaryTree> stack = new LinkedList<BinaryTree>();
         stack.push(this);
-        BinaryTree current;
         BinaryTree previous = null;
 
         while(!stack.isEmpty())
         {
-            current = stack.peek();
+            BinaryTree current = stack.peek();
             if (current==null)
                 stack.pop();
             else if (current.left==null && current.right==null)
             {
+                //Case 1
                 //at leaf node
-                //post, pre, in
-                //result.add(current.data);
+                //always - visit leaf
+                result.add(current.data);
                 stack.pop();
             }
             else if (previous == current.right)
             {
+                //Case 2
                 //returned after right node
-                //post
+                if (traversalType==TraversalType.POSTORDER)
+                    result.add(current.data);
                 stack.pop();
             }
             else if (previous == current.left)
             {
-                //in
-                //if (current.right!=null)
-                    stack.push(current.right);
+                //Case 3
+                if (traversalType==TraversalType.INORDER)
+                    result.add(current.data);
+                stack.push(current.right);
             }
             else {
-                //pre
-                result.add(current.data);
-                //if (current.left!=null)
-                    stack.push(current.left);
+                //Case 4
+                if (traversalType==TraversalType.PREORDER)
+                    result.add(current.data);
+                stack.push(current.left);
             }
             previous = current;
         }
 
-
-
         return result;
     }
+
+
+    public ArrayList<Integer> postOrderNonRecursive() {
+        return traverseNonRecursive(TraversalType.POSTORDER);
+    }
+
+    public ArrayList<Integer> inOrderNonRecursive() {
+        return traverseNonRecursive(TraversalType.INORDER);
+    }
+
+    public ArrayList<Integer> preOrderNonRecursive() {
+        return traverseNonRecursive(TraversalType.PREORDER);
+    }
+
+
 }

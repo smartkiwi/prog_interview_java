@@ -59,10 +59,31 @@ public class BinaryTreeTest extends TestCase {
 
     public void testPostOrderNonRecursiveTraversal() throws Exception {
         BinaryTree myNode = Utils.buildTestTreeFull();
-        ArrayList<Integer> orderRecursive = myNode.postOrderNonRecursive();
+        ArrayList<Integer> orderRecursive = myNode.postOrderRecursive();
         ArrayList<Integer> orderNonRecursive = myNode.postOrderNonRecursive();
 
         assertEquals(orderNonRecursive, orderRecursive);
     }
+
+
+
+    public void testInOrderNonRecursiveTraversal() throws Exception {
+        BinaryTree myNode = Utils.buildTestTreeFull();
+        ArrayList<Integer> orderRecursive = myNode.inOrderRecursive();
+        ArrayList<Integer> orderNonRecursive = myNode.inOrderNonRecursive();
+
+        assertEquals(orderNonRecursive, orderRecursive);
+    }
+
+
+
+    public void testPreOrderNonRecursiveTraversal() throws Exception {
+        BinaryTree myNode = Utils.buildTestTreeFull();
+        ArrayList<Integer> orderRecursive = myNode.preOrderRecursive();
+        ArrayList<Integer> orderNonRecursive = myNode.preOrderNonRecursive();
+
+        assertEquals(orderNonRecursive, orderRecursive);
+    }
+
 
 }

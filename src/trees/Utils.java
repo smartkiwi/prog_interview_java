@@ -10,6 +10,14 @@ package trees;
 class Utils {
 
     public static BinaryTree buildTestTreeFull() {
+        /*
+
+           1
+          / \
+         2   5
+        / \ / \
+        3 4 6 7
+         */
         BinaryTree myNode1 = new BinaryTree(1);
         myNode1.left = new BinaryTree(2);
         myNode1.left.left = new BinaryTree(3);
@@ -23,6 +31,17 @@ class Utils {
     }
 
     public static BinaryTree buildTestTreeRight() {
+        /*
+           1
+         /   \
+        2     3
+         \     \
+          4     5
+              /  \
+             6    7
+            / \  / \
+           8  9 10  11
+         */
         BinaryTree myNode1 = new BinaryTree(1);
         myNode1.left = new BinaryTree(2);
         myNode1.right = new BinaryTree(3);
@@ -40,5 +59,4 @@ class Utils {
         myNode1.right.right.right.right = new BinaryTree(11);
         return myNode1;
     }
-
 }
