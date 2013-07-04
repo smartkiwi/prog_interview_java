@@ -52,5 +52,29 @@ public class Utils {
         return start;
     }
 
+    public static LinkedListElement rotateNLeft(LinkedListElement current, int n) throws IllegalArgumentException {
+        if (n==0)
+            return current;
+        LinkedListElement newTail = current;
+        while(n>1 && newTail.next!=null) {
+            newTail = newTail.next;
+            n--;
+        }
+        if (n>1)
+            throw new IllegalArgumentException("N should be less than size of linked list: "+n);
+
+        LinkedListElement newHead = newTail.next;
+        newTail.next = null;
+
+        LinkedListElement newNewTail = newHead;
+
+        while (newNewTail.next!=null)
+            newNewTail = newNewTail.next;
+
+        newNewTail.next = current;
+        current = newHead;
+        return current;
+    }
+
 
 }
