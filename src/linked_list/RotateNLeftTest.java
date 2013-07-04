@@ -37,7 +37,7 @@ public class RotateNLeftTest extends TestCase {
         //System.out.println(testList.dump());
         boolean thrown=false;
         try {
-            LinkedListElement result = rotateNLeft(testList, 12);
+            rotateNLeft(testList, 12);
         } catch (IllegalArgumentException e) {
             thrown = true;
         }

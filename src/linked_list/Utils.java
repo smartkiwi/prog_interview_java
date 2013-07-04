@@ -68,6 +68,7 @@ public class Utils {
 
         LinkedListElement newNewTail = newHead;
 
+        assert newNewTail != null;
         while (newNewTail.next!=null)
             newNewTail = newNewTail.next;
 
