@@ -100,7 +100,7 @@ public class BinaryTree {
             else if (previous == current.right)
             {
                 //Case 2
-                //returned after right node
+                //returned up after right node
                 if (traversalType==TraversalType.POSTORDER)
                     result.add(current.data);
                 stack.pop();
@@ -108,12 +108,14 @@ public class BinaryTree {
             else if (previous == current.left)
             {
                 //Case 3
+                //returned up from the left node
                 if (traversalType==TraversalType.INORDER)
                     result.add(current.data);
                 stack.push(current.right);
             }
             else {
                 //Case 4
+                //everything else - let's go to the left node down
                 if (traversalType==TraversalType.PREORDER)
                     result.add(current.data);
                 stack.push(current.left);
