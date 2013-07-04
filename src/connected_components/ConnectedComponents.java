@@ -46,19 +46,19 @@ public class ConnectedComponents {
     void colorNeighbours(int rowNum, int colNum) {
         setMatrixElement(rowNum, colNum, getComponentsCounter());
         //up
-/*        if (checkIfElementExists(rowNum - 1, colNum) && getMatrixElement(rowNum - 1, colNum) == 1) {
+        if (checkIfElementExists(rowNum - 1, colNum) && getMatrixElement(rowNum - 1, colNum) == 1) {
             colorNeighbours(rowNum - 1, colNum);
-        }*/
+        }
 
         //down
         if (checkIfElementExists(rowNum + 1, colNum) && getMatrixElement(rowNum + 1, colNum) == 1) {
             colorNeighbours(rowNum + 1, colNum);
         }
 
-/*        //left
+        //left
         if (checkIfElementExists(rowNum, colNum - 1) && getMatrixElement(rowNum, colNum - 1) == 1) {
             colorNeighbours(rowNum, colNum - 1);
-        }*/
+        }
 
 
         //right

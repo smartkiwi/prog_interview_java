@@ -44,15 +44,16 @@ public class ConnectedComponentsTest extends junit.framework.TestCase {
 
     public void testCountComponents_case1() throws Exception {
         int[][] testCase3 = new int[][]{
-                {1, 0, 1},
-                {1, 0, 1},
-                {1, 1, 0},
+                {1, 0, 1, 0},
+                {1, 0, 1, 0},
+                {1, 1, 0, 0},
+                {0, 0, 0, 0},
         };
         ConnectedComponents cc = new ConnectedComponents(testCase3);
         assertEquals(cc.countComponents(), 2);
     }
 
-    public void testCountComponents_case2() throws Exception {
+    public void testCountComponents_case2_1() throws Exception {
         int[][] testCase3 = new int[][]{
                 {1, 0, 1},
                 {1, 0, 1},
@@ -62,11 +63,24 @@ public class ConnectedComponentsTest extends junit.framework.TestCase {
         assertEquals(cc.countComponents(), 1);
     }
 
+
+    public void testCountComponents_case2_2() throws Exception {
+        int[][] testCase3 = new int[][]{
+                {1, 0, 1, 0},
+                {1, 0, 1, 0},
+                {1, 1, 1, 0},
+                {0, 0, 0, 0},
+        };
+        ConnectedComponents cc = new ConnectedComponents(testCase3);
+        assertEquals(cc.countComponents(), 1);
+    }
+
     public void testCountComponents_case3() throws Exception {
         int[][] testCase3 = new int[][]{
-                {1, 1, 1},
-                {1, 0, 1},
-                {1, 1, 1},
+                {1, 1, 1, 0},
+                {1, 0, 1, 0},
+                {1, 1, 1, 0},
+                {0, 0, 0, 0},
         };
         ConnectedComponents cc = new ConnectedComponents(testCase3);
         assertEquals(cc.countComponents(), 1);
@@ -78,7 +92,8 @@ public class ConnectedComponentsTest extends junit.framework.TestCase {
         int[][] testCase3 = new int[][]{
                 {1, 0, 1, 0, 1},
                 {0, 1, 0, 1, 0},
-                {1, 0, 1, 0, 1}
+                {1, 0, 1, 0, 1},
+                {0, 0, 0, 0, 0},
 
         };
         ConnectedComponents cc = new ConnectedComponents(testCase3);
