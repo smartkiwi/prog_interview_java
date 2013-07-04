@@ -17,7 +17,8 @@ public class BinaryTree {
     BinaryTree left;
     BinaryTree right;
 
-    private ArrayList<Integer> preOrderList;
+
+    private ArrayList<Integer> result;
 
     private enum TraversalType {
         PREORDER, INORDER, POSTORDER
@@ -29,22 +30,22 @@ public class BinaryTree {
 
     public ArrayList<Integer> preOrderRecursive()
     {
-        this.preOrderList = new ArrayList<Integer>();
+        this.result = new ArrayList<Integer>();
         DFSTraversalUniversal(null, TraversalType.PREORDER);
-        return this.preOrderList;
+        return this.result;
     }
     public ArrayList<Integer> inOrderRecursive()
     {
-        this.preOrderList = new ArrayList<Integer>();
+        this.result = new ArrayList<Integer>();
         DFSTraversalUniversal(null, TraversalType.INORDER);
-        return this.preOrderList;
+        return this.result;
     }
 
     public ArrayList<Integer> postOrderRecursive()
     {
-        this.preOrderList = new ArrayList<Integer>();
+        this.result = new ArrayList<Integer>();
         DFSTraversalUniversal(null, TraversalType.POSTORDER);
-        return this.preOrderList;
+        return this.result;
     }
 
 
@@ -52,15 +53,15 @@ public class BinaryTree {
         if (myNode==null)
             myNode = this;
         if (traversalType==TraversalType.PREORDER)
-            this.preOrderList.add(myNode.data);
+            this.result.add(myNode.data);
         if (myNode.left!=null)
             DFSTraversalUniversal(myNode.left, traversalType);
         if (traversalType==TraversalType.INORDER)
-            this.preOrderList.add(myNode.data);
+            this.result.add(myNode.data);
         if (myNode.right!=null)
             DFSTraversalUniversal(myNode.right, traversalType);
         if (traversalType==TraversalType.POSTORDER)
-            this.preOrderList.add(myNode.data);
+            this.result.add(myNode.data);
     }
 
     public ArrayList<Integer> BFSTraversal() {
