@@ -13,7 +13,7 @@ import java.util.ArrayList;
  */
 public class NodeTest extends TestCase {
     public void testPreOrderRecursive() throws Exception {
-        Node myNode = Utils.buildTestTreeFull();
+        BinaryTree myNode = Utils.buildTestTreeFull();
         ArrayList<Integer> order = myNode.preOrderRecursive();
 
         System.out.println("PreOrderTraversal");
@@ -23,7 +23,7 @@ public class NodeTest extends TestCase {
         assertEquals(order, linked_list.Utils.arrayToList(expectedResultIntAr));
     }
     public void testInOrderRecursive() throws Exception {
-        Node myNode = Utils.buildTestTreeFull();
+        BinaryTree myNode = Utils.buildTestTreeFull();
         ArrayList<Integer> order = myNode.inOrderRecursive();
 
         System.out.println("InOrderTraversal");
@@ -35,7 +35,7 @@ public class NodeTest extends TestCase {
 
 
     public void testPostOrderRecursive() throws Exception {
-        Node myNode = Utils.buildTestTreeFull();
+        BinaryTree myNode = Utils.buildTestTreeFull();
         ArrayList<Integer> order = myNode.postOrderRecursive();
 
         System.out.println("PostOrderTraversal");
@@ -46,7 +46,7 @@ public class NodeTest extends TestCase {
     }
 
     public void testBSFTraversal() throws Exception {
-        Node myNode = Utils.buildTestTreeFull();
+        BinaryTree myNode = Utils.buildTestTreeFull();
         ArrayList<Integer> order = myNode.BFSTraversal();
 
         System.out.println("BFSTraversal");
@@ -54,6 +54,15 @@ public class NodeTest extends TestCase {
 
         Integer[] expectedResultIntAr = {1,2,5,3,4,6,7};
         assertEquals(order, linked_list.Utils.arrayToList(expectedResultIntAr));
+    }
+
+
+    public void testPostOrderNonRecursiveTraversal() throws Exception {
+        BinaryTree myNode = Utils.buildTestTreeFull();
+        ArrayList<Integer> orderRecursive = myNode.postOrderNonRecursive();
+        ArrayList<Integer> orderNonRecursive = myNode.postOrderNonRecursive();
+
+        assertEquals(orderNonRecursive, orderRecursive);
     }
 
 }
