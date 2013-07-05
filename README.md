@@ -49,8 +49,8 @@ Various Programming Interview Problems solved in Java:
  * [ ] Longest Increasing Subsequence
 
 ##Hash
- * [ ] Implement hash using linked list
- * [ ] Implement hash using array
+ * [ ] Implement hashmap using linked list
+ * [ ] Implement hashmap using array
 
 
 ##Dynamic Programming
