@@ -1,32 +1,32 @@
 Various Programming Interview Problems solved in Java:
 
 ##LinkedList
- * Implement linked list
- * Reverse linked list
- * Rotate linked list for N elements left
+ * [x] Implement linked list
+ * [x] Reverse linked list (non recursive)
+ * [x] Rotate linked list for N elements left
 
 ##Stack and Queue
- * Implement Queue using LinkedList
- * Implement Stack using LinkedList
- * Implement Stack using Queue
- * Implement Queue using Stack
+ * [x] Implement Queue using LinkedList
+ * [x] Implement Stack using LinkedList
+ * [x] Implement Stack using Queue
+ * [x] Implement Queue using Stack
 
 ##BinaryTries
- * Implement pre/in/post order recursive traversal
- * Implement pre/in/post order without recursion traversal
- * Validate that Binary Tree is Binary Search Tree
+ * [x] Implement pre/in/post order recursive traversal
+ * [x] Implement pre/in/post order without recursion traversal
+ * [x] Validate that Binary Tree is Binary Search Tree
 
 ##Arrays
- * Count Connected Components
+ * [x] Count Connected Components
 
 ##Strings
 
 
 ##Quine
- * write program that prints itself
+ * [x] write program that prints itself
 
 #Running tests
- * checkout from github
+ * git clone https://github.com/smartkiwi/prog_interview_java.git
  * cd prog_interview_java
  * mvn test
 
