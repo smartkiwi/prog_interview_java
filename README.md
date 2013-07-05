@@ -48,6 +48,10 @@ Various Programming Interview Problems solved in Java:
  * [ ] N Queen Problem
  * [ ] Longest Increasing Subsequence
 
+##Hash
+ * [ ] Implement hash using linked list
+ * [ ] Implement hash using array
+
 
 ##Dynamic Programming
  * [ ] Find all change combination per amount
