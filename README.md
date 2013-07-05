@@ -1,5 +1,8 @@
 Various Programming Interview Problems solved in Java:
 
+Solved: 12
+To be solved: 47
+
 ##LinkedList
  * [x] Implement linked list
  * [x] Reverse linked list (non recursive)
