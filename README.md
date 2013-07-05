@@ -1,7 +1,7 @@
 Various Programming Interview Problems solved in Java:
 
 Solved: 12
-To be solved: 47
+To be solved: 51
 
 ##LinkedList
  * [x] Implement linked list
@@ -10,6 +10,7 @@ To be solved: 47
  * [ ] Find intersections of two linked lists
  * [ ] Interweave Linked List
  * [ ] Insert Value into Sorted Circular Linked List
+ * [ ] Delete alternate nodes of a Linked List (odd or event)
 
 ##Stack and Queue
  * [x] Implement Queue using LinkedList
@@ -31,6 +32,7 @@ To be solved: 47
  * [ ] Get All Possible In Orders From Pre Order Traversal
  * [ ] Print Full Binary Tree Boundary
  * [ ] SubTree Binary Tree Judging
+ * [ ] Implement Find and Delete for binary tree.
 
 ##Arrays
  * [x] Count Connected Components
@@ -50,6 +52,8 @@ To be solved: 47
  * [ ] Print All Size K Subsets
  * [ ] N Queen Problem
  * [ ] Longest Increasing Subsequence
+ * [ ] Binary search in sorted array
+ * [ ] Given an array of numbers, arrange it such that all the numbers less than a given key should come before the key and all the numbers greater than the key should come after it.
 
 ##Hash
  * [ ] Implement hashmap using linked list
