@@ -140,5 +140,17 @@ public class BinaryTree {
         return traverseNonRecursive(TraversalType.PREORDER);
     }
 
+    public boolean isValidBST() {
+        return isValidBSTNode(this);
+    }
+
+    private boolean isValidBSTNode(BinaryTree current) {
+        if (current.left!=null && (current.data<current.left.data || isValidBSTNode(current.left)))
+            return false;
+
+        if (current.right!=null && (current.data>current.right.data || isValidBSTNode(current.right)))
+            return false;
+        return true;
+    }
 
 }

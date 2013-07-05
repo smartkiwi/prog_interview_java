@@ -86,4 +86,19 @@ public class BinaryTreeTest extends TestCase {
     }
 
 
+    public void testValidateBSTFalse() throws Exception {
+        BinaryTree myNode = Utils.buildTestTreeFull();
+        assertFalse(myNode.isValidBST());
+    }
+
+    public void testValidateBSTTrue() throws Exception {
+        BinaryTree myNode = new BinaryTree(5);
+        myNode.left = new BinaryTree(4);
+        myNode.left.left = new BinaryTree(3);
+        myNode.right = new BinaryTree(6);
+        myNode.right.right = new BinaryTree(8);
+        assertTrue(myNode.isValidBST());
+    }
+
+
 }
