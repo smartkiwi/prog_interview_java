@@ -24,3 +24,9 @@ Various Programming Interview Problems solved in Java:
 
 ##Quine
  * write program that prints itself
+
+#Running tests
+ * checkout from github
+ * cd prog_interview_java
+ * mvn test
+
