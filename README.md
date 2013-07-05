@@ -1,7 +1,7 @@
 Various Programming Interview Problems solved in Java:
 
 Solved: 12
-To be solved: 51
+To be solved: 52
 
 ##LinkedList
  * [x] Implement linked list
@@ -33,6 +33,7 @@ To be solved: 51
  * [ ] Print Full Binary Tree Boundary
  * [ ] SubTree Binary Tree Judging
  * [ ] Implement Find and Delete for binary tree.
+ * [ ] Given a binary tree. Write a function that takes only root node as arguement and returns (sum of values at odd height)-(sum of values at even height).
 
 ##Arrays
  * [x] Count Connected Components
@@ -83,6 +84,9 @@ To be solved: 51
  * [ ] Sudoku solver
  * [ ] Twenty Four Game
  * [ ] Calculator Without
+
+
+##SQL
 
 
 ##Quine
