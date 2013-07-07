@@ -1,7 +1,7 @@
 Various Programming Interview Problems solved in Java:
 
-Solved: 12
-To be solved: 52
+Solved: 14
+To be solved: 50
 
 ##LinkedList
  * [x] Implement linked list
@@ -24,7 +24,7 @@ To be solved: 52
  * [x] Validate that Binary Tree is Binary Search Tree
  * [ ] Serialize/Deserialize Binary Tree
  * [x] Reconstruct Binary Tree having in preorder and inorder traversal
- * [ ] Reconstruct Binary Tree having in postorder and inorder traversal
+ * [x] Reconstruct Binary Tree having in postorder and inorder traversal
  * [ ] Find closest value in BST
  * [ ] Find closest value in BST (iterative)
  * [ ] Print Binary Tree Level
