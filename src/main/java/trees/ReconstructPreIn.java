@@ -11,15 +11,15 @@ import java.util.Collections;
  */
 public class ReconstructPreIn {
     //int preIndex;
-    int[] inOrderBackIndex;
-    int[] preOrder;
-    int[] inOrder;
+    private int[] inOrderBackIndex;
+    private int[] preOrder;
+
 
     public BinaryTree reconstruct(int[] preOrder, int[] inOrder) {
         if (preOrder.length!=inOrder.length)
             return null;
         this.preOrder = preOrder;
-        this.inOrder = inOrder;
+
         //preIndex = 0;
 
         int size = 0;
@@ -30,7 +30,7 @@ public class ReconstructPreIn {
         this.inOrderBackIndex = new int[size+1];
 
         for(int i=0;i<inOrder.length;i++)
-            inOrderBackIndex[inOrder[i]] = i;
+            this.inOrderBackIndex[inOrder[i]] = i;
 
         return reconstruct(0, preOrder.length-1, 0, inOrder.length-1);
     }
