@@ -1,5 +1,7 @@
 package trees;
 
+import linked_list.*;
+
 import java.util.Collections;
 
 /**
@@ -29,8 +31,14 @@ public class ReconstructPreIn {
 
         this.inOrderBackIndex = new int[size+1];
 
-        for(int i=0;i<inOrder.length;i++)
+        for(int i=0;i<size+1;i++)
+            this.inOrderBackIndex[i] = -1;
+
+        for(int i=0;i<inOrder.length;i++) {
+            if (this.inOrderBackIndex[inOrder[i]]>=0)
+                throw new IllegalArgumentException("inOrder array should not contain duplicates: "+i+" "+this.inOrderBackIndex[inOrder[i]]+" "+inOrder[i]);
             this.inOrderBackIndex[inOrder[i]] = i;
+        }
 
         return reconstruct(0, preOrder.length-1, 0);
     }
@@ -46,7 +54,7 @@ public class ReconstructPreIn {
         BinaryTree myNode = new BinaryTree(preOrder[preStart]);
 
         int vertexIndex = inOrderBackIndex[preOrder[preStart]];
-        if (vertexIndex<inStart)
+        if (vertexIndex<inStart || vertexIndex<0)
             vertexIndex=0;
 
 
