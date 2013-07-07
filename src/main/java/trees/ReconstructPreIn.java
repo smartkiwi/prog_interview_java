@@ -26,6 +26,7 @@ public class ReconstructPreIn {
         //preIndex = 0;
 
         int size = 0;
+        //noinspection ForLoopReplaceableByForEach
         for(int i=0;i<inOrder.length;i++)
             if (inOrder[i]>size)
                 size = inOrder[i];
@@ -74,7 +75,7 @@ public class ReconstructPreIn {
         this.preOrder = preOrder;
         this.inOrder = inOrder;
 
-        return reconstructNoLookupTable(0, preOrder.length-1, 0, inOrder.length-1);
+        return reconstructNoLookupTable(0, preOrder.length - 1, 0, inOrder.length - 1);
     }
 
     private BinaryTree reconstructNoLookupTable(int preStart, int preEnd, int inStart, int inEnd) {
@@ -87,7 +88,7 @@ public class ReconstructPreIn {
 
         BinaryTree myNode = new BinaryTree(preOrder[preStart]);
 
-        int vertexIndex = 0;
+        @SuppressWarnings("UnusedAssignment") int vertexIndex = 0;
         for (vertexIndex=inStart;vertexIndex<=inEnd;vertexIndex++)
             if (preOrder[preStart]==inOrder[vertexIndex])
                 break;
@@ -95,8 +96,8 @@ public class ReconstructPreIn {
 
         int leftOffset = vertexIndex - inStart;
 
-        myNode.left = reconstructNoLookupTable(preStart+1, preStart+leftOffset, inStart, inStart+leftOffset-1);
-        myNode.right = reconstructNoLookupTable(preStart+leftOffset+1, preEnd, inStart+leftOffset+1, inEnd);
+        myNode.left = reconstructNoLookupTable(preStart + 1, preStart + leftOffset, inStart, inStart + leftOffset - 1);
+        myNode.right = reconstructNoLookupTable(preStart + leftOffset + 1, preEnd, inStart + leftOffset + 1, inEnd);
 
         return myNode;
     }
