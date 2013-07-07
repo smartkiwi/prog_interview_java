@@ -15,6 +15,7 @@ public class ReconstructPreIn {
     //int preIndex;
     private int[] inOrderBackIndex;
     private int[] preOrder;
+    private int[] inOrder;
 
 
     public BinaryTree reconstruct(int[] preOrder, int[] inOrder) {
@@ -65,4 +66,39 @@ public class ReconstructPreIn {
 
         return myNode;
     }
+
+
+    public BinaryTree reconstructNoLookupTable(int[] preOrder, int[] inOrder) {
+        if (preOrder.length!=inOrder.length)
+            return null;
+        this.preOrder = preOrder;
+        this.inOrder = inOrder;
+
+        return reconstructNoLookupTable(0, preOrder.length-1, 0, inOrder.length-1);
+    }
+
+    private BinaryTree reconstructNoLookupTable(int preStart, int preEnd, int inStart, int inEnd) {
+        if (preStart>preEnd)
+            return null;
+
+        if (preStart==preEnd)
+            return new BinaryTree(preOrder[preStart]);
+
+
+        BinaryTree myNode = new BinaryTree(preOrder[preStart]);
+
+        int vertexIndex = 0;
+        for (vertexIndex=inStart;vertexIndex<=inEnd;vertexIndex++)
+            if (preOrder[preStart]==inOrder[vertexIndex])
+                break;
+
+
+        int leftOffset = vertexIndex - inStart;
+
+        myNode.left = reconstructNoLookupTable(preStart+1, preStart+leftOffset, inStart, inStart+leftOffset-1);
+        myNode.right = reconstructNoLookupTable(preStart+leftOffset+1, preEnd, inStart+leftOffset+1, inEnd);
+
+        return myNode;
+    }
+
 }
