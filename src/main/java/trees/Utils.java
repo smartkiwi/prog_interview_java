@@ -1,5 +1,7 @@
 package trees;
 
+import java.util.ArrayList;
+
 /**
  * Created with IntelliJ IDEA.
  * User: vvlad
@@ -58,5 +60,15 @@ class Utils {
         myNode1.right.right.right.left = new BinaryTree(10);
         myNode1.right.right.right.right = new BinaryTree(11);
         return myNode1;
+    }
+
+    static int[] toIntArray(ArrayList<Integer> input) {
+        int[] result = new int[input.size()];
+        int i=0;
+        for(Integer el : input) {
+            result[i] = el;
+            i++;
+        }
+        return result;
     }
 }

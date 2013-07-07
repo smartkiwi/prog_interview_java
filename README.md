@@ -52,7 +52,6 @@ To be solved: 52
  * [ ] Largest Rectangle In Histogram
  * [ ] Print All Size K Subsets
  * [ ] N Queen Problem
- * [ ] Longest Increasing Subsequence
  * [ ] Binary search in sorted array
  * [ ] Given an array of numbers, arrange it such that all the numbers less than a given key should come before the key and all the numbers greater than the key should come after it.
 
@@ -64,6 +63,7 @@ To be solved: 52
 ##Dynamic Programming
  * [ ] Find all change combination per amount
  * [ ] Compute largest submatrix sum
+ * [ ] Longest Increasing Subsequence
 
 ##Strings
  * [ ] Reverse string inplace
