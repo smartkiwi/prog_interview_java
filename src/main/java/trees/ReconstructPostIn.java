@@ -7,6 +7,7 @@ package trees;
  * Time: 11:29 AM
  * Reconstructs Binary Tree out of Post and In order traversals
  */
+@SuppressWarnings("WeakerAccess")
 public class ReconstructPostIn {
 
 

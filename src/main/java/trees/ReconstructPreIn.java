@@ -11,6 +11,7 @@ import java.util.Collections;
  * Time: 8:55 PM
  * Reconstructs Binary Tree from preOrder and inOrder traversals
  */
+@SuppressWarnings("WeakerAccess")
 public class ReconstructPreIn {
     //int preIndex;
     private int[] inOrderBackIndex;
