@@ -66,8 +66,8 @@ To be solved: 50
  * [ ] Longest Increasing Subsequence
 
 ##Strings
- * [ ] Reverse string inplace
- * [ ] Reverse words in string inplace
+ * [x] Reverse string inplace
+ * [x] Reverse words in string inplace
  * [ ] Find longest palindrome in string O(n)
  * [ ] Generate next permutation for the string
  * [ ] Generate all possible permutations of letters for the phone number
