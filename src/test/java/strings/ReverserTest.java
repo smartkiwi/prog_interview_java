@@ -12,38 +12,38 @@ import junit.framework.TestCase;
 public class ReverserTest extends TestCase {
     public void testReverseWords() throws Exception {
         String testString = "test string many words";
-        char [] charArray = Reverser.convertStringToCharArray(testString);
+        char [] charArray = Utils.convertStringToCharArray(testString);
         Reverser.reverseWordsOrder(charArray);
 
         String testResult = "words many string test";
-        assertEquals(Reverser.convertCharArrayToString(charArray),testResult);
+        assertEquals(Utils.convertCharArrayToString(charArray),testResult);
 
 
-        char[] oneWord = Reverser.convertStringToCharArray("oneword");
+        char[] oneWord = Utils.convertStringToCharArray("oneword");
         Reverser.reverseWordsOrder(oneWord);
-        assertEquals("oneword", Reverser.convertCharArrayToString(oneWord));
+        assertEquals("oneword", Utils.convertCharArrayToString(oneWord));
 
 
     }
 
     public void testReversePartOfString_full() throws Exception {
         String testString = "test string many words";
-        char [] charArray = Reverser.convertStringToCharArray(testString);
+        char [] charArray = Utils.convertStringToCharArray(testString);
         Reverser.reversePartOfCharArray(charArray, 0, charArray.length - 1);
         String testResult = new StringBuilder(testString).reverse().toString();
-        assertEquals(Reverser.convertCharArrayToString(charArray),testResult);
+        assertEquals(Utils.convertCharArrayToString(charArray),testResult);
     }
 
     public void testReversePartOfString_part() throws Exception {
         String testString = "test string many words";
-        char [] charArray = Reverser.convertStringToCharArray(testString);
+        char [] charArray = Utils.convertStringToCharArray(testString);
         Reverser.reversePartOfCharArray(charArray, 0, 3);
 
-        assertEquals(Reverser.convertCharArrayToString(charArray),"tset string many words");
+        assertEquals(Utils.convertCharArrayToString(charArray),"tset string many words");
 
         Reverser.reversePartOfCharArray(charArray, 5, 10);
 
-        assertEquals(Reverser.convertCharArrayToString(charArray),"tset gnirts many words");
+        assertEquals(Utils.convertCharArrayToString(charArray),"tset gnirts many words");
 
 
     }

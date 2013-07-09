@@ -9,19 +9,6 @@ package strings;
  */
 @SuppressWarnings("WeakerAccess")
 public class Reverser {
-    public static char[] convertStringToCharArray(String s) {
-        char[] result = new char[s.length()];
-        for (int i=0;i<s.length();i++) {
-            result[i] = s.charAt(i);
-        }
-        return result;
-    }
-
-    public static String convertCharArrayToString(char[] c) {
-        StringBuilder s = new StringBuilder();
-        s.append(c);
-        return s.toString();
-    }
 
     @SuppressWarnings("WeakerAccess")
     public static void reverseCharArray(char[] s) {
@@ -42,7 +29,7 @@ public class Reverser {
     }
 
     public static void reverseWordsOrder(char [] s) {
-        if (!hasSpaces(s))
+        if (hasNoSpaces(s))
             return;
         reverseCharArray(s);
         //System.out.println(convertCharArrayToString(s));
@@ -60,10 +47,10 @@ public class Reverser {
             reversePartOfCharArray(s, lastSpacePos+1, s.length-1);
     }
 
-    private static boolean hasSpaces(char[] s) {
+    private static boolean hasNoSpaces(char[] s) {
         for(char c : s)
             if (c==' ')
-                return true;
-        return false;
+                return false;
+        return true;
     }
 }

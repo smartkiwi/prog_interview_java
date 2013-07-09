@@ -1,7 +1,7 @@
 Various Programming Interview Problems solved in Java:
 
-Solved: 14
-To be solved: 50
+Solved: 17
+To be solved: 47
 
 ##LinkedList
  * [x] Implement linked list
@@ -68,7 +68,7 @@ To be solved: 50
 ##Strings
  * [x] Reverse string inplace
  * [x] Reverse words in string inplace
- * [ ] Find longest palindrome in string O(n)
+ * [x] Find longest palindrome in string O(n)
  * [ ] Generate next permutation for the string
  * [ ] Generate all possible permutations of letters for the phone number
  * [ ] Print valid parenthesis combinations
