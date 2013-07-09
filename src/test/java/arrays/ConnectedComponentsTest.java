@@ -1,4 +1,6 @@
-package connected_components;
+package arrays;
+
+import arrays.ConnectedComponents;
 
 public class ConnectedComponentsTest extends junit.framework.TestCase {
 

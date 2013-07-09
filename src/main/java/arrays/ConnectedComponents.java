@@ -1,4 +1,4 @@
-package connected_components;
+package arrays;
 
 public class ConnectedComponents {
     private final int[][] matrix;
