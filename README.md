@@ -86,6 +86,13 @@ To be solved: 47
  * [ ] Calculator Without
 
 
+##Sorting
+ * [ ] bubble sort
+ * [ ] selection sort
+ * [ ] insert sort
+ * [ ] quick sort
+ * [ ] merge sort
+
 ##SQL
 
 

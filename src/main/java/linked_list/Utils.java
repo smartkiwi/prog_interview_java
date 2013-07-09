@@ -21,6 +21,15 @@ public class Utils {
         return (l);
     }
 
+    public static ArrayList<Integer> arrayToList(final int[] array) {
+        final ArrayList<Integer> l = new ArrayList<Integer>(array.length);
+
+        for (int el: array)
+            l.add(el);
+        return (l);
+    }
+
+
     public static LinkedListElement reverseLinkedList(LinkedListElement first) {
         if (first==null)
             return null;
