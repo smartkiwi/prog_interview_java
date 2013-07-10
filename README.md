@@ -70,7 +70,7 @@ To be solved: 47
  * [x] Reverse words in string inplace
  * [x] Find longest palindrome in string O(n)
  * [ ] Generate next permutation for the string
- * [ ] Generate all possible permutations of letters for the phone number
+ * [x] Generate all possible permutations of letters for the phone number
  * [ ] Print valid parenthesis combinations
  * [ ] String permutation (using swap)
  * [ ] Verify rotated palindrome
