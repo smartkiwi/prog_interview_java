@@ -1,7 +1,7 @@
 Various Programming Interview Problems solved in Java:
 
-Solved: 17
-To be solved: 47
+Solved: 19
+To be solved: 50
 
 ##LinkedList
  * [x] Implement linked list
@@ -61,6 +61,7 @@ To be solved: 47
 
 
 ##Dynamic Programming
+ * [x] Stair Climbing Problem
  * [ ] Find all change combination per amount
  * [ ] Compute largest submatrix sum
  * [ ] Longest Increasing Subsequence
@@ -80,7 +81,6 @@ To be solved: 47
  * [ ] Implement division without division operator
 
 ##Other
- * [ ] Stair Climbing Problem
  * [ ] Sudoku solver
  * [ ] Twenty Four Game
  * [ ] Calculator Without
