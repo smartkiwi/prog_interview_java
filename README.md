@@ -62,7 +62,7 @@ To be solved: 51
 
 ##Dynamic Programming
  * [x] Stair Climbing Problem
- * [ ] print all change combination per amount
+ * [x] print all change combination per amount
  * [x] count all change combination per amount
  * [ ] Compute largest submatrix sum
  * [ ] Longest Increasing Subsequence
