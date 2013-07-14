@@ -23,6 +23,31 @@ public class CountSteps {
         return countSteps(n - 3)+ countSteps(n - 2)+ countSteps(n - 1);
     }
 
+
+    public static long countStepsIterative(int n) {
+        if (n<0)
+            return 0;
+        if (n==0)
+            return 0;
+        if (n==1)
+            return 1;
+        if (n==2)
+            return 2;
+        if (n==3)
+            return 4;
+        int[] prev = {1,2,4};
+        int current = 3;
+        while(current<n) {
+            int nextValue = prev[0]+prev[1]+prev[2];
+            prev[0]=prev[1];
+            prev[1]=prev[2];
+            prev[2]=nextValue;
+            current++;
+        }
+        return prev[2];
+    }
+
+
     public static long countStepsDP(int n, long[] map) {
         if (n<0)
             return 0;
@@ -52,11 +77,42 @@ public class CountSteps {
     }
 
 
+    public static BigInteger countStepsIterativeBI(int n) {
+        if (n<0)
+            return BigInteger.valueOf(0);
+        if (n==0)
+            return BigInteger.valueOf(0);
+        if (n==1)
+            return BigInteger.valueOf(1);
+        if (n==2)
+            return BigInteger.valueOf(2);
+        if (n==3)
+            return BigInteger.valueOf(4);
+        BigInteger[] prev = {BigInteger.valueOf(1),BigInteger.valueOf(2),BigInteger.valueOf(4)};
+        int current = 3;
+        while (current<n) {
+            BigInteger nextValue = BigInteger.valueOf(0).add(prev[0]).add(prev[1]).add(prev[2]);
+            prev[0]=prev[1];
+            prev[1]=prev[2];
+            prev[2] = nextValue;
+            current++;
+        }
+        return prev[2];
+    }
+
+
     public static void main(String[] args) {
         //plain recursion
         System.out.println("using recursion");
         for (int n=1;n<28;n++)
             System.out.println("n="+n+": "+ countSteps(n));
+
+
+        System.out.println("using interative DP");
+        for (int i=0;i<28;i++)
+            System.out.println("n="+i+": "+ countStepsIterative(i));
+
+
         System.out.println("using recursion and cache (DP)");
         int maxN = 100;
         long[] map = new long[maxN];
@@ -64,6 +120,10 @@ public class CountSteps {
             map[i]=-1;
         for (int i=0;i<maxN;i++)
             System.out.println("n="+i+": "+ countStepsDP(i, map));
+
+
+
+
 
         System.out.println("using recursion and cache (DP) and BigInteger");
 
@@ -81,6 +141,9 @@ public class CountSteps {
                 resultString = result.toString();
             System.out.println("n="+i+": "+ resultString);
         }
+
+        System.out.println("using iterative DP and BigInteger");
+        System.out.println("20000: "+countStepsIterativeBI(20000));
 
 
     }
