@@ -78,8 +78,10 @@ To be solved: 51
  * [ ] Verify rotated palindrome
 
 ##Math
- * [ ] Calculate Square Root
+ * [x] Calculate Square Root (binary search method)
+ * [ ] Calculate Square Root (Newtons method)
  * [ ] Implement division without division operator
+ * [ ] Check if the number is the perfect square in efficient way
 
 ##Other
  * [ ] Sudoku solver
