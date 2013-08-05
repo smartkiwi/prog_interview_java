@@ -46,4 +46,42 @@ public class SquareRootTest extends TestCase {
     }
 
 
+    public void testGetSquareRootN_simpleCases() throws Exception {
+        assertEquals(SquareRoot.getSquareRootNewton(0), 0.0);
+        assertEquals(SquareRoot.getSquareRootNewton(1), 1.0);
+
+        assertEquals(SquareRoot.getSquareRootBinarySearch(-10), -1.0);
+
+    }
+
+    public void testGetSquareRootN_simpleCases_greaterThen1_integers() throws Exception {
+        double precision = 0.00001;
+        assertEquals(2.0, SquareRoot.getSquareRootNewton(2.0 * 2.0), precision );
+        assertEquals(4.0, SquareRoot.getSquareRootNewton(4.0 * 4.0), precision );
+        assertEquals(3.0, SquareRoot.getSquareRootNewton(3.0 * 3.0), precision );
+
+        assertEquals(5.0, SquareRoot.getSquareRootNewton(5.0 * 5.0, precision), precision);
+    }
+
+    public void testGetSquareRootN_simpleCases_greaterThen1_real() throws Exception {
+        double precision = 0.000001;
+        assertEquals(1.5, SquareRoot.getSquareRootNewton(1.5 * 1.5, precision), precision);
+        assertEquals(2.5, SquareRoot.getSquareRootNewton(2.5 * 2.5, precision), precision);
+
+        assertEquals(11.11, SquareRoot.getSquareRootNewton(11.11 * 11.11, precision), precision);
+    }
+
+    public void testGetSquareRootN_simpleCases_lessThen1_real() throws Exception {
+        //newton method uses precision to compare square of the number
+        //to make assertEquals work we should use square root of precision
+        double precision = 0.000001;
+        double assertPrecision = 0.001;
+
+        assertEquals(0.25, SquareRoot.getSquareRootNewton(0.25 * 0.25, precision), assertPrecision);
+        assertEquals(0.125, SquareRoot.getSquareRootNewton(0.125 * 0.125, precision), assertPrecision);
+
+        assertEquals(0.11, SquareRoot.getSquareRootNewton(0.11 * 0.11, precision), assertPrecision);
+    }
+
+
 }
