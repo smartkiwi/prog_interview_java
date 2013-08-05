@@ -9,31 +9,47 @@ package math;
  */
 public class SquareRoot {
     private static final double PRECISION = 0.0000001;
+    private static int iterations;
 
     public static double getSquareRootBinarySearch(double target) {
         return getSquareRootBinarySearch(target, PRECISION);
     }
 
+    public static int getIterations() {
+        return iterations;
+    }
+
     public static double getSquareRootBinarySearch(double target, double precision) {
+        iterations = 0;
         if (target == 0 || target==1) return target;
         if (target<0) return -1;
 
 
         double start=0;
         double end=target;
-        double mid = 0;
+
+
+        if (target<1)
+            end = 1;
 
 
         while((end-start)>precision) {
-            mid = (start+end)/2;
+            double mid = (start+end)/2;
             double newTarget = mid * mid;
             if (newTarget==target) return mid;
             if (newTarget>target)
                 end = mid;
             else
                 start = mid;
+            iterations++;
         }
 
-        return mid;
+        return (start+end)/2;
+    }
+
+
+    public static void main(String[] args) {
+        System.out.println("BS Square Root: 50 (0.0000000001): = " + getSquareRootBinarySearch(50, 0.0000000001));
+        System.out.println("Iterations: "+getIterations());
     }
 }

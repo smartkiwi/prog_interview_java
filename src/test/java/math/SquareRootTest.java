@@ -37,4 +37,13 @@ public class SquareRootTest extends TestCase {
         assertEquals(11.11, getSquareRootBinarySearch(11.11 * 11.11, precision), precision);
     }
 
+    public void testGetSquareRoot_simpleCases_lessThen1_real() throws Exception {
+        double precision = 0.000001;
+        assertEquals(0.25, getSquareRootBinarySearch(0.25 * 0.25, precision), precision);
+        assertEquals(0.125, getSquareRootBinarySearch(0.125 * 0.125, precision), precision);
+
+        assertEquals(0.11, getSquareRootBinarySearch(0.11 * 0.11, precision), precision);
+    }
+
+
 }
