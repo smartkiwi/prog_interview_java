@@ -51,9 +51,9 @@ public class SquareRoot {
 
 
     public static void main(String[] args) {
-        System.out.println("BS Square Root: 500 (0.0000000001): = " + getSquareRootBinarySearch(500, 0.0000000001));
+        System.out.println("BS Square Root: 500 (precision 1e-12): = " + getSquareRootBinarySearch(500, 1e-12));
         System.out.println("Iterations: "+getIterations());
-        System.out.println("BS Square Root: 500 (0.0000000001): = " + getSquareRootNewton(500, 0.0000000001));
+        System.out.println("BS Square Root: 500 (precision 1e-12): = " + getSquareRootNewton(500, 1e-12));
         System.out.println("Iterations: "+getIterations());
 
     }
